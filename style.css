@@ -1,0 +1,470 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===========================
+   FONDO
+=========================== */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    width:100%;
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        -45deg,
+        #ff4e8a,
+        #ff8fb1,
+        #ffc6d9,
+        #a66cff,
+        #6f5bff
+    );
+
+    background-size:400% 400%;
+
+    animation:fondo 18s ease infinite;
+
+    position:relative;
+
+}
+
+/* Oscurece ligeramente el fondo para dar profundidad */
+
+body::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.18);
+
+    z-index:0;
+
+}
+
+/* ===========================
+   ANIMACIÓN FONDO
+=========================== */
+
+@keyframes fondo{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* ===========================
+   CONTENIDO
+=========================== */
+
+.inicio{
+
+    position:relative;
+
+    z-index:10;
+
+    text-align:center;
+
+    color:white;
+
+    width:90%;
+    max-width:800px;
+
+    animation:aparecer 1.5s ease;
+
+}
+
+/* ===========================
+   TITULOS
+=========================== */
+
+h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:90px;
+
+    margin:20px 0;
+
+    text-shadow:
+    0 0 10px rgba(255,255,255,.8),
+    0 0 20px rgba(255,255,255,.4);
+
+}
+
+h2{
+
+    font-size:28px;
+
+    font-weight:300;
+
+    letter-spacing:2px;
+
+}
+
+p{
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    line-height:1.6;
+
+}
+
+/* ===========================
+   BOTON
+=========================== */
+
+button{
+
+    margin-top:40px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:60px;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:#ff2d75;
+
+    background:white;
+
+    transition:.35s;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    background:#ff2d75;
+
+    color:white;
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+/* ===========================
+   MENSAJE
+=========================== */
+
+#mensaje{
+
+    margin-top:35px;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    text-shadow:0 0 15px white;
+
+}
+
+/* ===========================
+   CORAZONES
+=========================== */
+
+#hearts{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+.heart{
+
+    position:fixed;
+
+    bottom:-50px;
+
+    color:rgba(255,255,255,.85);
+
+    animation:subir linear forwards;
+
+    text-shadow:0 0 15px white;
+
+}
+
+/* ===========================
+   ANIMACION CORAZONES
+=========================== */
+
+@keyframes subir{
+
+    0%{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(-120vh)
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ===========================
+   APARICION
+=========================== */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+.foto-principal{
+    width:250px;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin-top:25px;
+
+    border:5px solid rgba(255,255,255,.8);
+
+    box-shadow:
+    0 0 20px rgba(255,255,255,.8);
+
+    animation:aparecer 1.5s ease; 
+
+}
+/* ===========================
+   HISTORIA
+=========================== */
+
+.historia{
+
+    display:none;
+
+    position:relative;
+
+    z-index:10;
+
+    text-align:center;
+
+    color:white;
+
+    width:90%;
+
+    max-width:700px;
+
+    animation:aparecer 1.5s ease;
+
+}
+
+
+.historia h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:50px;
+
+}
+
+
+.historia p{
+
+    font-size:20px;
+
+}
+
+
+.historia img{
+
+    width:300px;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin-top:20px;
+
+    box-shadow:0 0 25px rgba(255,255,255,.7);
+
+}
+/* ===========================
+   HISTORIA PRIMERA FOTO
+=========================== */
+
+.historia{
+
+    display:none;
+
+    position:relative;
+
+    z-index:10;
+
+    text-align:center;
+
+    color:white;
+
+    width:90%;
+
+    max-width:700px;
+
+    animation:aparecer 1.5s ease;
+
+}
+
+
+.foto-historia{
+
+    width:300px;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    border:5px solid white;
+
+    box-shadow:
+    0 0 30px rgba(255,255,255,.8);
+
+}
+
+
+.historia h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    margin-top:25px;
+
+}
+
+
+.historia p{
+
+    font-size:20px;
+
+}
+
+#btnSiguiente{
+    
+    margin-top:30px;
+
+}
+#fotoHistoria,
+#tituloHistoria,
+#textoHistoria{
+
+    transition: opacity 1s ease;
+
+}
+.final{
+
+    display:none !important;
+
+    position:relative;
+
+    z-index:10;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.final h1{
+
+    font-size:70px;
+
+}
+
+
+.final p{
+
+    font-size:24px;
+
+    line-height:1.8;
+
+}
